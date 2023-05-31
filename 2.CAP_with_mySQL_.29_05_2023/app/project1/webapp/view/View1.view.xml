@@ -1,0 +1,39 @@
+<mvc:View controllerName="project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content />
+
+<Table id="tbSalesOrderSet"
+                    showNoData="false"
+                    items="{ path: 'obj>/ls' }">
+                    <columns>
+                        <Column id="product" width="12em">
+                            <Text text="ID" />
+                        </Column>
+                        <Column width="auto" minScreenWidth="Tablet" demandPopin="true">
+                            <Text text="name" />
+                        </Column>
+                        
+                    </columns>
+                    <items>
+                        <ColumnListItem
+                            type="Navigation"
+                            vAlign="Middle">
+                            <cells>
+                                <ObjectIdentifier title="{obj>ID}" />
+                                <Text
+                                    text="{obj>name}" />                                                  
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+
+
+
+    </Page>
+
+
+
+
+</mvc:View>
