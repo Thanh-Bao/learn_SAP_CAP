@@ -14,6 +14,8 @@ sap.ui.define([
                     ls: [],
                 });
 
+
+
                 this.getView().setModel(oStateModel, "obj");
 
                 fetch("/catalog/Authors")
@@ -22,6 +24,10 @@ sap.ui.define([
                         console.log(data.value);
                         this.getView().getModel('obj').setProperty(`/ls`, data.value)
                     })
+            },
+
+            onAfterRendering: function () {
+                this.getView().getModel()
             }
         });
     });
